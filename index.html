@@ -1,0 +1,209 @@
+<!doctype html>
+<head><meta charset="utf-8">
+<title>Intl.Segmenter Proposal</title><script type="application/json" id="menu-search-biblio">[{"type":"clause","id":"segmenter-objects","aoid":null,"title":"Segmenter Objects","number":"1","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"Segmenter Objects"},{"type":"clause","id":"sec-intl-segmenter-constructor","aoid":null,"title":"The Intl.Segmenter Constructor","number":"1.1","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"The Intl.Segmenter Constructor"},{"type":"clause","id":"sec-Intl.Segmenter","aoid":null,"title":"Intl.Segmenter ([ locales [ , options ]])","number":"1.1.1","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"Intl.Segmenter ([ locales [ , options ]])"},{"type":"clause","id":"sec-properties-of-intl-segmenter-constructor","aoid":null,"title":"Properties of the Intl.Segmenter Constructor","number":"1.2","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"Properties of the Intl.Segmenter Constructor"},{"type":"clause","id":"sec-Intl.Segmenter.prototype","aoid":null,"title":"Intl.Segmenter.prototype","number":"1.2.1","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"Intl.Segmenter.prototype"},{"type":"clause","id":"sec-Intl.Segmenter.supportedLocalesOf","aoid":null,"title":"Intl.Segmenter.supportedLocalesOf (locales [, options ])","number":"1.2.2","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"Intl.Segmenter.supportedLocalesOf (locales [, options ])"},{"type":"clause","id":"sec-Intl.Segmenter-internal-slots","aoid":null,"title":"Internal slots","number":"1.2.3","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"Internal slots"},{"type":"clause","id":"sec-properties-of-intl-segmenter-prototype-object","aoid":null,"title":"Properties of the Intl.Segmenter Prototype Object","number":"1.3","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"Properties of the Intl.Segmenter Prototype Object"},{"type":"clause","id":"sec-Intl.Segmenter.prototype.constructor","aoid":null,"title":"Intl.Segmenter.prototype.constructor","number":"1.3.1","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"Intl.Segmenter.prototype.constructor"},{"type":"op","aoid":"Intl.Segmenter.prototype.segment","refId":"sec-Intl.Segmenter.prototype.segment","location":"","key":"Intl.Segmenter.prototype.segment"},{"type":"clause","id":"sec-Intl.Segmenter.prototype.segment","aoid":"Intl.Segmenter.prototype.segment","title":"Intl.Segmenter.prototype.segment( string )","number":"1.3.2","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"Intl.Segmenter.prototype.segment( string )"},{"type":"op","aoid":"Intl.Segmenter.prototype.reverseSegment","refId":"sec-Intl.Segmenter.prototype.reverseSegment","location":"","key":"Intl.Segmenter.prototype.reverseSegment"},{"type":"clause","id":"sec-Intl.Segmenter.prototype.reverseSegment","aoid":"Intl.Segmenter.prototype.reverseSegment","title":"Intl.Segmenter.prototype.reverseSegment( string )","number":"1.3.3","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"Intl.Segmenter.prototype.reverseSegment( string )"},{"type":"clause","id":"sec-Intl.Segmenter.prototype.resolvedOptions","aoid":null,"title":"Intl.Segmenter.prototype.resolvedOptions ()","number":"1.3.4","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"Intl.Segmenter.prototype.resolvedOptions ()"},{"type":"clause","id":"sec-segmenter-internal-slots","aoid":null,"title":"Internal slots of Intl.Segmenter Instances","number":"1.4","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"Internal slots of Intl.Segmenter Instances"},{"type":"clause","id":"segment-iterator-objects","aoid":null,"title":"Segment Iterators","number":"1.5","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"Segment Iterators"},{"type":"op","aoid":"CreateSegmentIterator","refId":"sec-CreateSegmentIterator","location":"","key":"CreateSegmentIterator"},{"type":"clause","id":"sec-CreateSegmentIterator","aoid":"CreateSegmentIterator","title":"CreateSegmentIterator ( segmenter, string, direction )","number":"1.5.1","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"CreateSegmentIterator ( segmenter, string, direction )"},{"type":"op","aoid":"AdvanceSegmentIterator","refId":"sec-AdvanceSegmentIterator","location":"","key":"AdvanceSegmentIterator"},{"type":"clause","id":"sec-AdvanceSegmentIterator","aoid":"AdvanceSegmentIterator","title":"AdvanceSegmentIterator ( iterator )","number":"1.5.2","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"AdvanceSegmentIterator ( iterator )"},{"type":"clause","id":"sec-segment-iterator-prototype","aoid":null,"title":"%SegmentIteratorPrototype%","number":"1.5.3","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"%SegmentIteratorPrototype%"},{"type":"clause","id":"sec-segment-iterator-prototype-next","aoid":null,"title":"%SegmentIteratorPrototype%.next( )","number":"1.5.3.1","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"%SegmentIteratorPrototype%.next( )"},{"type":"clause","id":"sec-segment-iterator-prototype-advance","aoid":null,"title":"%SegmentIteratorPrototype%.advance( )","number":"1.5.3.2","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"%SegmentIteratorPrototype%.advance( )"},{"type":"clause","id":"sec-segment-iterator-prototype-position","aoid":null,"title":"get %SegmentIteratorPrototype%.position","number":"1.5.3.3","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"get %SegmentIteratorPrototype%.position"},{"type":"clause","id":"sec-segment-iterator-prototype-breakType","aoid":null,"title":"get %SegmentIteratorPrototype%.breakType","number":"1.5.3.4","namespace":"https://github.com/tc39/proposal-intl-segmenter","location":"","key":"get %SegmentIteratorPrototype%.breakType"}]</script></head><body><div id="menu-toggle">☰</div><div id="menu"><div id="menu-search"><input type="text" id="menu-search-box" placeholder="Search..."><div id="menu-search-results" class="inactive"></div></div><div id="menu-toc"><ol class="toc"><li><span class="item-toggle">◢</span><a href="#segmenter-objects" title="Segmenter Objects"><span class="secnum">1</span> Segmenter Objects</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-intl-segmenter-constructor" title="The Intl.Segmenter Constructor"><span class="secnum">1.1</span> The Intl.Segmenter Constructor</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-Intl.Segmenter" title="Intl.Segmenter ([ locales [ , options ]])"><span class="secnum">1.1.1</span> Intl.Segmenter ([ locales [ , options ]])</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-properties-of-intl-segmenter-constructor" title="Properties of the Intl.Segmenter Constructor"><span class="secnum">1.2</span> Properties of the Intl.Segmenter Constructor</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-Intl.Segmenter.prototype" title="Intl.Segmenter.prototype"><span class="secnum">1.2.1</span> Intl.Segmenter.prototype</a></li><li><span class="item-toggle-none"></span><a href="#sec-Intl.Segmenter.supportedLocalesOf" title="Intl.Segmenter.supportedLocalesOf (locales [, options ])"><span class="secnum">1.2.2</span> Intl.Segmenter.supportedLocalesOf (locales [, options ])</a></li><li><span class="item-toggle-none"></span><a href="#sec-Intl.Segmenter-internal-slots" title="Internal slots"><span class="secnum">1.2.3</span> Internal slots</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-properties-of-intl-segmenter-prototype-object" title="Properties of the Intl.Segmenter Prototype Object"><span class="secnum">1.3</span> Properties of the Intl.Segmenter Prototype Object</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-Intl.Segmenter.prototype.constructor" title="Intl.Segmenter.prototype.constructor"><span class="secnum">1.3.1</span> Intl.Segmenter.prototype.constructor</a></li><li><span class="item-toggle-none"></span><a href="#sec-Intl.Segmenter.prototype.segment" title="Intl.Segmenter.prototype.segment( string )"><span class="secnum">1.3.2</span> Intl.Segmenter.prototype.segment( string )</a></li><li><span class="item-toggle-none"></span><a href="#sec-Intl.Segmenter.prototype.reverseSegment" title="Intl.Segmenter.prototype.reverseSegment( string )"><span class="secnum">1.3.3</span> Intl.Segmenter.prototype.reverseSegment( string )</a></li><li><span class="item-toggle-none"></span><a href="#sec-Intl.Segmenter.prototype.resolvedOptions" title="Intl.Segmenter.prototype.resolvedOptions ()"><span class="secnum">1.3.4</span> Intl.Segmenter.prototype.resolvedOptions ()</a></li></ol></li><li><span class="item-toggle-none"></span><a href="#sec-segmenter-internal-slots" title="Internal slots of Intl.Segmenter Instances"><span class="secnum">1.4</span> Internal slots of Intl.Segmenter Instances</a></li><li><span class="item-toggle">◢</span><a href="#segment-iterator-objects" title="Segment Iterators"><span class="secnum">1.5</span> Segment Iterators</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-CreateSegmentIterator" title="CreateSegmentIterator ( segmenter, string, direction )"><span class="secnum">1.5.1</span> CreateSegmentIterator ( segmenter, string, direction )</a></li><li><span class="item-toggle-none"></span><a href="#sec-AdvanceSegmentIterator" title="AdvanceSegmentIterator ( iterator )"><span class="secnum">1.5.2</span> AdvanceSegmentIterator ( iterator )</a></li><li><span class="item-toggle">◢</span><a href="#sec-segment-iterator-prototype" title="%SegmentIteratorPrototype%"><span class="secnum">1.5.3</span> %SegmentIteratorPrototype%</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-segment-iterator-prototype-next" title="%SegmentIteratorPrototype%.next( )"><span class="secnum">1.5.3.1</span> %SegmentIteratorPrototype%.next( )</a></li><li><span class="item-toggle-none"></span><a href="#sec-segment-iterator-prototype-advance" title="%SegmentIteratorPrototype%.advance( )"><span class="secnum">1.5.3.2</span> %SegmentIteratorPrototype%.advance( )</a></li><li><span class="item-toggle-none"></span><a href="#sec-segment-iterator-prototype-position" title="get %SegmentIteratorPrototype%.position"><span class="secnum">1.5.3.3</span> get %SegmentIteratorPrototype%.position</a></li><li><span class="item-toggle-none"></span><a href="#sec-segment-iterator-prototype-breakType" title="get %SegmentIteratorPrototype%.breakType"><span class="secnum">1.5.3.4</span> get %SegmentIteratorPrototype%.breakType</a></li></ol></li></ol></li></ol></li></ol></div></div><h1 class="version">Stage 1 Draft / November 29, 2016</h1><h1 class="title">Intl.Segmenter Proposal</h1>
+<script src="ecmarkup.js" defer=""></script>
+<link rel="stylesheet" href="ecmarkup.css">
+
+<emu-clause id="segmenter-objects">
+  <h1><span class="secnum">1</span>Segmenter Objects<span class="utils"><span class="anchor"><a href="#segmenter-objects">#</a></span></span></h1>
+
+  <emu-clause id="sec-intl-segmenter-constructor">
+    <h1><span class="secnum">1.1</span>The Intl.Segmenter Constructor<span class="utils"><span class="anchor"><a href="#sec-intl-segmenter-constructor">#</a></span></span></h1>
+
+    <p>
+      The Segmenter constructor is a standard built-in property of the Intl object.</p>
+
+    <emu-clause id="sec-Intl.Segmenter">
+      <h1><span class="secnum">1.1.1</span>Intl.Segmenter ([ locales [ , options ]])<span class="utils"><span class="anchor"><a href="#sec-Intl.Segmenter">#</a></span></span></h1>
+
+      <p>
+        When the <emu-val>Intl.Segmenter</emu-val> function is called with optional arguments the following steps are taken:
+      
+      </p>
+
+      <emu-alg><ol><li>If NewTarget is <emu-val>undefined</emu-val>, let <var>newTarget</var> be the <emu-xref href="#active-function-object"><a href="https://tc39.github.io/ecma262/#active-function-object">active function object</a></emu-xref>, else let <var>newTarget</var> be NewTarget.</li><li>Let <var>segmenter</var> be ? <emu-xref aoid="OrdinaryCreateFromConstructor"><a href="https://tc39.github.io/ecma262/#sec-ordinarycreatefromconstructor">OrdinaryCreateFromConstructor</a></emu-xref>(<var>newTarget</var>, <emu-val>%SegmenterPrototype%</emu-val>).</li><li>Let <var>requestedLocales</var> be ? CanonicalizeLocaleList(<var>locales</var>).</li><li>Let <var>opt</var> be a new <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref>.</li><li>Let <var>matcher</var> be ? GetOption(<var>options</var>, <emu-val>"localeMatcher"</emu-val>, <emu-val>"string"</emu-val>, « <emu-val>"lookup"</emu-val>, <emu-val>"best fit"</emu-val> », <emu-val>"best fit"</emu-val>).</li><li>Set <var>opt</var>.[[localeMatcher]] to <var>matcher</var>.</li><li>Let <var>r</var> be ResolveLocale(%Segmenter%.[[AvailableLocales]], <var>requestedLocales</var>, <var>opt</var>, %Segmenter%.[[RelevantExtensionKeys]]).</li><li>Set <var>segmenter</var>.[[Locale]] to the value of <var>r</var>.[[Locale]].</li><li>If <var>options</var> is <emu-val>undefined</emu-val>, then<ol><li>Let <var>options</var> be <emu-xref aoid="ObjectCreate"><a href="https://tc39.github.io/ecma262/#sec-objectcreate">ObjectCreate</a></emu-xref>(<emu-val>%ObjectPrototype%</emu-val>).</li></ol></li><li>Else<ol><li>Let <var>options</var> be ? <emu-xref aoid="ToObject"><a href="https://tc39.github.io/ecma262/#sec-toobject">ToObject</a></emu-xref>(<var>options</var>).</li></ol></li><li>Let <var>granularity</var> be ? GetOption(<var>options</var>, <emu-val>"granularity"</emu-val>, <emu-val>"string"</emu-val>, « <emu-val>"grapheme"</emu-val>, <emu-val>"word"</emu-val>, <emu-val>"sentence"</emu-val>,  <emu-val>"line"</emu-val> », <emu-val>"grapheme"</emu-val>).</li><li>Set <var>segmenter</var>.[[SegmenterGranularity]] to <var>granularity</var>.</li><li>If <var>granularity</var> is <emu-val>"line"</emu-val>,<ol><li>Let <var>strength</var> be ? GetOption(<var>options</var>, <emu-val>"strength"</emu-val>, <emu-val>"string"</emu-val>,  « <emu-val>"strict"</emu-val>, <emu-val>"normal"</emu-val>, <emu-val>"loose"</emu-val> », <emu-val>"normal"</emu-val>).</li><li>Set <var>segmenter</var>.[[SegmenterStrength]] to <var>strength</var>.</li></ol></li><li>Return <var>segmenter</var>.
+      </li></ol></emu-alg>
+    </emu-clause>
+  </emu-clause>
+
+  <emu-clause id="sec-properties-of-intl-segmenter-constructor">
+    <h1><span class="secnum">1.2</span>Properties of the Intl.Segmenter Constructor<span class="utils"><span class="anchor"><a href="#sec-properties-of-intl-segmenter-constructor">#</a></span></span></h1>
+
+    <p>
+      The Intl.Segmenter constructor has the following properties:
+    
+    </p>
+
+    <emu-clause id="sec-Intl.Segmenter.prototype">
+      <h1><span class="secnum">1.2.1</span>Intl.Segmenter.prototype<span class="utils"><span class="anchor"><a href="#sec-Intl.Segmenter.prototype">#</a></span></span></h1>
+
+      <p>
+        The value of <emu-val>Intl.Segmenter.prototype</emu-val> is <emu-val>%SegmenterPrototype%</emu-val>.
+      
+      </p>
+      <p>
+        This property has the attributes { [[Writable]]: <emu-val>false</emu-val>, [[Enumerable]]: <emu-val>false</emu-val>, [[Configurable]]: <emu-val>false</emu-val> }.
+      
+      </p>
+    </emu-clause>
+
+    <emu-clause id="sec-Intl.Segmenter.supportedLocalesOf">
+      <h1><span class="secnum">1.2.2</span>Intl.Segmenter.supportedLocalesOf (locales [, options ])<span class="utils"><span class="anchor"><a href="#sec-Intl.Segmenter.supportedLocalesOf">#</a></span></span></h1>
+
+      <p>
+        When the <emu-val>supportedLocalesOf</emu-val> method of <emu-val>%Segmenter%</emu-val> is called, the following steps are taken:
+      
+      </p>
+
+      <emu-alg><ol><li>Let <var>availableLocales</var> be <emu-val>%Segmenter%</emu-val>.[[AvailableLocales]].</li><li>Let <var>requestedLocales</var> be ? CanonicalizeLocaleList(<var>locales</var>).</li><li>Return ? SupportedLocales(<var>availableLocales</var>, <var>requestedLocales</var>, <var>options</var>).
+      </li></ol></emu-alg>
+
+      <p>
+        The value of the <emu-val>length</emu-val> property of the <emu-val>supportedLocalesOf</emu-val> method is 1.
+      
+      </p>
+    </emu-clause>
+
+    <emu-clause id="sec-Intl.Segmenter-internal-slots">
+      <h1><span class="secnum">1.2.3</span>Internal slots<span class="utils"><span class="anchor"><a href="#sec-Intl.Segmenter-internal-slots">#</a></span></span></h1>
+
+      <p>
+        The value of the [[AvailableLocales]] internal slot is implementation defined within the constraints described in  <emu-xref href="#sec-segmenter-internal-slots"><a href="#sec-segmenter-internal-slots">1.4</a></emu-xref>.
+      
+      </p>
+
+      <p>
+        The value of the [[RelevantExtensionKeys]] internal slot is <emu-val>[]</emu-val>.
+      
+      </p>
+
+      <emu-note><span class="note">Note</span>
+        CLDR defines several extension keys, but this specification does not expose them.
+        
+        <!-- TODO(littledan): Is there one for strength that should be exposed? -->
+      </emu-note>
+
+    </emu-clause>
+  </emu-clause>
+
+  <emu-clause id="sec-properties-of-intl-segmenter-prototype-object">
+    <h1><span class="secnum">1.3</span>Properties of the Intl.Segmenter Prototype Object<span class="utils"><span class="anchor"><a href="#sec-properties-of-intl-segmenter-prototype-object">#</a></span></span></h1>
+
+    <p>
+      The Intl.Segmenter prototype object, referred to as <emu-val>%SegmenterPrototype%</emu-val>, is itself an ordinary object. It is not a Segmenter instance, and has no instance-like internal slots.
+    
+    </p>
+
+    <emu-clause id="sec-Intl.Segmenter.prototype.constructor">
+      <h1><span class="secnum">1.3.1</span>Intl.Segmenter.prototype.constructor<span class="utils"><span class="anchor"><a href="#sec-Intl.Segmenter.prototype.constructor">#</a></span></span></h1>
+
+      <p>
+        The initial value of <emu-val>Intl.Segmenter.prototype.constructor</emu-val> is <emu-val>%Segmenter%</emu-val>.
+      
+      </p>
+    </emu-clause>
+
+    <emu-clause id="sec-Intl.Segmenter.prototype.segment" aoid="Intl.Segmenter.prototype.segment">
+      <h1><span class="secnum">1.3.2</span>Intl.Segmenter.prototype.segment( string )<span class="utils"><span class="anchor"><a href="#sec-Intl.Segmenter.prototype.segment">#</a></span></span></h1>
+
+      <p>
+        When the <emu-val>Intl.Segmenter.prototype.segment</emu-val> is called with an argument <var>string</var>, the following steps are taken:
+      
+      </p>
+
+      <emu-alg><ol><li>Let <var>segment</var> be <emu-val>this</emu-val> value.</li><li>If <emu-xref aoid="Type"><a href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values">Type</a></emu-xref>(<var>segment</var>) is not Object or <var>segment</var> does not have an [[SegmenterGranularity]] internal slot, throw a <emu-val>TypeError</emu-val> exception.</li><li>Let <var>string</var> be ? <emu-xref aoid="ToString"><a href="https://tc39.github.io/ecma262/#sec-tostring">ToString</a></emu-xref>(<var>string</var>).</li><li>Return ? <emu-xref aoid="CreateSegmentIterator"><a href="#sec-CreateSegmentIterator">CreateSegmentIterator</a></emu-xref>(<var>segment</var>, <var>string</var>, <emu-const>forwards</emu-const>).
+      </li></ol></emu-alg>
+    </emu-clause>
+
+    <emu-clause id="sec-Intl.Segmenter.prototype.reverseSegment" aoid="Intl.Segmenter.prototype.reverseSegment">
+      <h1><span class="secnum">1.3.3</span>Intl.Segmenter.prototype.reverseSegment( string )<span class="utils"><span class="anchor"><a href="#sec-Intl.Segmenter.prototype.reverseSegment">#</a></span></span></h1>
+
+      <p>
+        When the <emu-val>Intl.Segmenter.prototype.reverseSegment</emu-val> is called with an argument <var>string</var>, the following steps are taken:
+      
+      </p>
+
+      <emu-alg><ol><li>Let <var>segment</var> be <emu-val>this</emu-val> value.</li><li>If <emu-xref aoid="Type"><a href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values">Type</a></emu-xref>(<var>segment</var>) is not Object or <var>segment</var> does not have an [[SegmenterGranularity]] internal slot, throw a <emu-val>TypeError</emu-val> exception.</li><li>Let <var>string</var> be ? <emu-xref aoid="ToString"><a href="https://tc39.github.io/ecma262/#sec-tostring">ToString</a></emu-xref>(<var>string</var>).</li><li>Return ? <emu-xref aoid="CreateSegmentIterator"><a href="#sec-CreateSegmentIterator">CreateSegmentIterator</a></emu-xref>(<var>segment</var>, <var>string</var>, <emu-const>backwards</emu-const>).
+      </li></ol></emu-alg>
+    </emu-clause>
+
+    <emu-clause id="sec-Intl.Segmenter.prototype.resolvedOptions">
+      <h1><span class="secnum">1.3.4</span>Intl.Segmenter.prototype.resolvedOptions ()<span class="utils"><span class="anchor"><a href="#sec-Intl.Segmenter.prototype.resolvedOptions">#</a></span></span></h1>
+
+      <p>
+        This function provides access to the locale and options computed during initialization of the object.
+      
+      </p>
+      <p>
+        The function returns a new object whose properties and attributes are set as if constructed by an object literal assigning to each of the following properties the value of the corresponding internal slot of this Segmenter object. (see  <emu-xref href="#sec-segmenter-internal-slots"><a href="#sec-segmenter-internal-slots">1.4</a></emu-xref>): locale, granularity and strength. Properties whose corresponding internal slots are not present are not assigned.
+      
+      </p>
+    </emu-clause>
+  </emu-clause>
+
+  <emu-clause id="sec-segmenter-internal-slots">
+    <h1><span class="secnum">1.4</span>Internal slots of Intl.Segmenter Instances<span class="utils"><span class="anchor"><a href="#sec-segmenter-internal-slots">#</a></span></span></h1>
+
+    <p>
+      Objects that have been successfully initialized as a Segmenter object also have several internal slots that are computed by the constructor:
+    
+    </p>
+
+    <ul>
+      <li>[[Locale]] is a String value with the language tag of the locale whose localization is used by the segmenter.</li>
+      <li>[[SegmenterGranularity]] is one of the String values <emu-val>"grapheme"</emu-val>, <emu-val>"word"</emu-val>, <emu-val>"sentence"</emu-val>, or <emu-val>"line"</emu-val>, identifying the segmenter used.</li>
+      <li>[[SegmenterStrength]] is present on Segmenter instances with line granularity. If present, it may be <emu-val>"strict"</emu-val>, <emu-val>"normal"</emu-val>, or <emu-val>"loose"</emu-val>.</li>
+    </ul>
+
+  </emu-clause>
+
+  <emu-clause id="segment-iterator-objects">
+    <h1><span class="secnum">1.5</span>Segment Iterators<span class="utils"><span class="anchor"><a href="#segment-iterator-objects">#</a></span></span></h1>
+    The methods Intl.Segment.prototype.segment and Intl.Segment.prototype.reverseSegment return iterators over the segments for a particular string. This section describes those iterator objects. 
+
+    <emu-clause id="sec-CreateSegmentIterator" aoid="CreateSegmentIterator">
+      <h1><span class="secnum">1.5.1</span>CreateSegmentIterator ( segmenter, string, direction )<span class="utils"><span class="anchor"><a href="#sec-CreateSegmentIterator">#</a></span></span></h1>
+      <p>When the abstract operation CreateSegmentIterator is called with Segmenter <var>segmenter</var>, string <var>string</var> and a direction either <emu-const>forwards</emu-const> or <emu-const>backwards</emu-const> <var>direction</var>, the following steps are taken:</p>
+      <emu-alg><ol><li>Let <var>iterator</var> be <emu-xref aoid="ObjectCreate"><a href="https://tc39.github.io/ecma262/#sec-objectcreate">ObjectCreate</a></emu-xref>(%SegmentIteratorPrototype%).</li><li>Let <var>iterator</var>.[[SegmentIteratorSegmenter]] be <var>segmenter</var>.</li><li>Let <var>iterator</var>.[[SegmentIteratorString]] be <var>string</var>.</li><li>Let <var>iterator</var>.[[SegmentIteratorDirection]] be <var>direction</var>.</li><li>If <var>direction</var> is <emu-const>forwards</emu-const>,<ol><li>Let <var>iterator</var>.[[SegmentIteratorPosition]] be <emu-val>0</emu-val>.</li></ol></li><li>Else,<ol><li>Assert: <var>direction</var> is <emu-const>backwards</emu-const>.</li><li>Let <var>iterator</var>.[[SegmentIteratorPosition]] be <emu-xref aoid="Get"><a href="https://tc39.github.io/ecma262/#sec-get-o-p">Get</a></emu-xref>(<var>string</var>, <code>"length"</code>).</li></ol></li><li>Let <var>iterator</var>.[[SegmentIteratorBreakType]] be an implementation-dependent string representing a break at the edge of a string.
+      </li></ol></emu-alg>
+    </emu-clause>
+
+    <emu-clause id="sec-AdvanceSegmentIterator" aoid="AdvanceSegmentIterator">
+      <h1><span class="secnum">1.5.2</span>AdvanceSegmentIterator ( iterator )<span class="utils"><span class="anchor"><a href="#sec-AdvanceSegmentIterator">#</a></span></span></h1>
+      <p>When the abstract operation AdvanceSegmentIterator is called with a segment iterator <var>iterator</var>, the following steps are taken:</p>
+      <emu-alg><ol><li>Let <var>segmenter</var> be <var>iterator</var>.[[SegmentIteratorSegmenter]].</li><li>Let <var>string</var> be <var>iterator</var>.[[SegmentIteratorString]].</li><li>Let <var>direction</var> be <var>iterator</var>.[[SegmentIteratorDirection]].</li><li>Let <var>position</var> be <var>iterator</var>.[[SegmentIteratorPosition]].</li><li>If <var>direction</var> is <emu-const>forwards</emu-const> and <var>position</var> is the length of <var>string</var>, or if <var>direction</var> is <emu-const>backwards</emu-const> and <var>position</var> is <emu-val>0</emu-val>, return true.</li><li>Based on the algorithm in UTS 14 or UTS 29, find the next or previous (based on <var>direction</var>) break in <var>string</var> from the position <var>position</var> based on the locale, granularity and strength in <var>segmenter</var>.[[Locale]], <var>segmenter</var>.[[SegmenterGranularity]] and, if present, <var>segmenter</var>.[[SegmenterStrength]].
+        <!--TODO(littledan): Define the set of break types rigorously here, or refere to an external standard --></li><li>Set <var>iterator</var>.[[SegmentIteratorBreakType]] to a string representing the type of break found.</li><li>Set <var>iterator</var>.[[SegmentIteratorPosition]] to the position of the newly found break point.</li><li>Return <emu-val>false</emu-val>.
+      </li></ol></emu-alg>
+    </emu-clause>
+
+    <emu-clause id="sec-segment-iterator-prototype">
+      <h1><span class="secnum">1.5.3</span>%SegmentIteratorPrototype%<span class="utils"><span class="anchor"><a href="#sec-segment-iterator-prototype">#</a></span></span></h1>
+      %SegmentIteratorPrototype% is the prototype of all segment iterators. %SegmentIteratorPrototype% has the following properties:
+      
+      <emu-clause id="sec-segment-iterator-prototype-next">
+        <h1><span class="secnum">1.5.3.1</span>%SegmentIteratorPrototype%.next( )<span class="utils"><span class="anchor"><a href="#sec-segment-iterator-prototype-next">#</a></span></span></h1>
+        <emu-alg><ol><li>Let <var>iterator</var> be <emu-val>this</emu-val> value.</li><li>If <var>iterator</var> does not have a [[SegmentIteratorSegmenter]] internal slot, throw a <emu-val>TypeError</emu-val> exception.</li><li>Let _previousPosition be <var>iterator</var>.[[SegmentIteratorPosition]].</li><li>Let <var>done</var> be <emu-xref aoid="AdvanceSegmentIterator"><a href="#sec-AdvanceSegmentIterator">AdvanceSegmentIterator</a></emu-xref>(<var>iterator</var>).</li><li>If <var>done</var> is <emu-val>true</emu-val>, return CreateIterResult(<emu-val>undefined</emu-val>, <emu-val>true</emu-val>).</li><li>Let <var>newPosition</var> be <var>iterator</var>.[[SegmentIteratorPosition]].</li><li>Let <var>string</var> be <var>iterator</var>.[[SegmentIteratorString]].</li><li>If <var>iterator</var>.[[SegmentIteratorDirection]] is <emu-const>forwards</emu-const>,<ol><li>Let <var>segment</var> be the substring of <var>string</var> from <var>previousPosition</var> to <var>newPosition</var>, inclusive of <var>previousPosition</var> and exclusive of <var>newPosition</var>.</li></ol></li><li>Else,<ol><li>Let <var>segment</var> be the substring of <var>string</var> from <var>newPosition</var> to <var>previousPosition</var>, inclusive of <var>newPosition</var> and exclusive of <var>previousPosition</var>.</li></ol></li><li>Let <var>breakType</var> be <var>iterator</var>.[[SegmentIteratorBreakType]].</li><li>Let <var>result</var> be ! <emu-xref aoid="ObjectCreate"><a href="https://tc39.github.io/ecma262/#sec-objectcreate">ObjectCreate</a></emu-xref>(<emu-xref href="#sec-properties-of-the-object-prototype-object"><a href="https://tc39.github.io/ecma262/#sec-properties-of-the-object-prototype-object">%ObjectPrototype%</a></emu-xref>).</li><li>Perform ! <emu-xref aoid="CreateDataProperty"><a href="https://tc39.github.io/ecma262/#sec-createdataproperty">CreateDataProperty</a></emu-xref>(<var>result</var> <code>"segment"</code>, <var>segment</var>).</li><li>Perform ! <emu-xref aoid="CreateDataProperty"><a href="https://tc39.github.io/ecma262/#sec-createdataproperty">CreateDataProperty</a></emu-xref>(<var>result</var>, <code>"breakType"</code>, <var>breakType</var>).</li><li>Return CreateIterResult(<var>result</var>, <emu-val>false</emu-val>).
+        </li></ol></emu-alg>
+      </emu-clause>
+
+      <emu-clause id="sec-segment-iterator-prototype-advance">
+        <h1><span class="secnum">1.5.3.2</span>%SegmentIteratorPrototype%.advance( )<span class="utils"><span class="anchor"><a href="#sec-segment-iterator-prototype-advance">#</a></span></span></h1>
+        <emu-alg><ol><li>Let <var>iterator</var> be <emu-val>this</emu-val> value.</li><li>If <var>iterator</var> does not have a [[SegmentIteratorSegmenter]] internal slot, throw a <emu-val>TypeError</emu-val> exception.</li><li>return <emu-xref aoid="AdvanceSegmentIterator"><a href="#sec-AdvanceSegmentIterator">AdvanceSegmentIterator</a></emu-xref>(<var>iterator</var>).
+        </li></ol></emu-alg>
+      </emu-clause>
+
+      <emu-clause id="sec-segment-iterator-prototype-position">
+        <h1><span class="secnum">1.5.3.3</span>get %SegmentIteratorPrototype%.position<span class="utils"><span class="anchor"><a href="#sec-segment-iterator-prototype-position">#</a></span></span></h1>
+        <emu-alg><ol><li>Let <var>iterator</var> be <emu-val>this</emu-val> value.</li><li>If <var>iterator</var> does not have a [[SegmentIteratorSegmenter]] internal slot, throw a <emu-val>TypeError</emu-val> exception.</li><li>Return <var>iterator</var>.[[SegmentIteratorBreakType]].
+        </li></ol></emu-alg>
+      </emu-clause>
+
+      <emu-clause id="sec-segment-iterator-prototype-breakType">
+        <h1><span class="secnum">1.5.3.4</span>get %SegmentIteratorPrototype%.breakType<span class="utils"><span class="anchor"><a href="#sec-segment-iterator-prototype-breakType">#</a></span></span></h1>
+        <emu-alg><ol><li>Let <var>iterator</var> be <emu-val>this</emu-val> value.</li><li>If <var>iterator</var> does not have a [[SegmentIteratorSegmenter]] internal slot, throw a <emu-val>TypeError</emu-val> exception.</li><li>Return <var>iterator</var>.[[SegmentIteratorBreakType]].
+        </li></ol></emu-alg>
+      </emu-clause>
+    </emu-clause>
+  </emu-clause>
+</emu-clause>
+</body>
